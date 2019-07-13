@@ -11,6 +11,7 @@ async def on_ready():
     print(app.user.name)
     print(app.user.id)
     print("=========")
+    await app.change_presence(game=discord.Game(name="Hi", type=2))
 
 @app.event
 async def on_message(message):
