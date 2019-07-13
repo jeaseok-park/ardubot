@@ -2,7 +2,7 @@ import serial
 import discord
 import asynico
 
-token = "NTk5NjA5NzY5OTc5OTM2Nzc4.XSn5Xg.l1kIn6glvcB3VvFqEQ70upJLGMQ"
+token = "NTk5NjA5NzY5OTc5OTM2Nzc4.XSnsRA.L9tiAaVCUu5gSRg4KU2AgLBSfoo"
 app = discord.Clinet()
 
 @app.event
