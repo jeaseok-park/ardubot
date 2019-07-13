@@ -1,1 +1,1 @@
-worker: python ardu.py
+web: python ardu.py
