@@ -1,10 +1,26 @@
 import serial
 import discord
+import asynico
 
 token = "NTk5NjA5NzY5OTc5OTM2Nzc4.XSn5Xg.l1kIn6glvcB3VvFqEQ70upJLGMQ"
 app = discord.Clinet()
 
+@app.event
+async def on_ready():
+    print("다음으로 로그인합니다 : ")
+    print(app.user.name)
+    print(app.user.id)
+    print("=========")
 
+@app.event
+async def on_message(message):
+    if message.author.bot:
+        return None
+    if message.content == "!1":
+        c == "1"
+    if message.content == "!0":
+        c == "0"
+    
 ard=serial.Serial('COM16' , 9600)
 while(1):
     c=input()
