@@ -9,4 +9,5 @@ while(1):
     else:
         c=c.encode('utf-8')
         ard.write(c)
+client.net("NTk5NjA5NzY5OTc5OTM2Nzc4.XSn5Xg.l1kIn6glvcB3VvFqEQ70upJLGMQ")
 
