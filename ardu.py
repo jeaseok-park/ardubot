@@ -1,9 +1,11 @@
 import serial
 import discord
-import asynico
+import asyncio
+ser=serial.Serial('COM16',9600)
 
-token = "NTk5NjA5NzY5OTc5OTM2Nzc4.XSnsRA.L9tiAaVCUu5gSRg4KU2AgLBSfoo"
-app = discord.Clinet()
+app = discord.Client()
+
+token = "NTk5NjA5NzY5OTc5OTM2Nzc4.XSrVPQ.GNwMRG60wFBO_ov09CNKsR4wUx8"
 
 @app.event
 async def on_ready():
@@ -11,26 +13,23 @@ async def on_ready():
     print(app.user.name)
     print(app.user.id)
     print("=========")
-    await app.change_presence(game=discord.Game(name="Hi", type=2))
-
+        
+     
 @app.event
 async def on_message(message):
-    if message.author.bot:
-        return None
-    if message.content == "!1":
-        c == "1"
-    if message.content == "!0":
-        c == "0"
     
-ard=serial.Serial('COM16' , 9600)
-while(1):
-    c=input()
-    if c=='q':
-        break
-    else:
-        c=c.encode('utf-8')
-        ard.write(c)
-
-
-
+        if message.author.bot:
+            return None
+        if message.content == "-1":
+            c="1"
+            print(c)
+            c=c.encode('utf-8')
+            ser.write(c)
+        if message.content == "-0":
+            c="0"
+            print(c)
+            c=c.encode('utf-8')
+            ser.write(c)
+            
+            
 app.run(token)
